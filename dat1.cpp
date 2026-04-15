@@ -8,16 +8,21 @@ vector<string> split(const string &);
 
 vector<int> rotateLeft(int d, vector<int> arr) {
     int n = arr.size();
-    vector<int> result(n);
     
-    // new rotated position
-    for(int i = 0; i < n; i++) {
-        result[i] = arr[(i + d) % n];
-    }
+    d = d % n; 
     
-    return result;
-}
+    // first 'd' elements
+    reverse(arr.begin(), arr.begin() + d);
+    
+    //remaining elements
+    reverse(arr.begin() + d, arr.end());
+    
+    //  Reverse entire array
+    reverse(arr.begin(), arr.end());
+    
+    return arr;
 
+}
 int main()
 {
     ofstream fout(getenv("OUTPUT_PATH"));
