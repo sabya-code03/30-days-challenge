@@ -1,5 +1,3 @@
-# 30-days-challenge
-
 <h1 align="center">🔥 30 Days Code Challenge</h1>
 
 <p align="center">
